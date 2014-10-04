@@ -1,0 +1,10 @@
+package ${model.PackageName};
+import c10n.annotations.*;
+public interface ${model.ClassName} {
+#foreach( $methodDefinition in $model.Methods.values() )
+    #foreach( $annotation in $methodDefinition.getMethodAnnotations() )
+        @${annotation.name}("${annotation.value}")
+    #end    
+    String ${methodDefinition.getMethodName()}(#foreach( $parameter in $methodDefinition.parameters ) Object param${parameter} #if($methodDefinition.getParameters().size() != $velocityCount), #else #end #end );
+#end
+}
