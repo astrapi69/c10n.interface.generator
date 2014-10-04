@@ -21,6 +21,10 @@
 # maven generated files #
 #########################
 /target
+###########################
+# project generated files #
+###########################
+/src/main/java/com
 
 #############
 # Zip files #
