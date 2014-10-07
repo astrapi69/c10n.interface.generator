@@ -7,8 +7,10 @@
 	<properties>
 		<!-- PROJECT encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jaulp.lang.version>2.4.0</jaulp.lang.version>
-		<jaulp.xml.version>1.4.0</jaulp.xml.version>
+		<!-- JAULP versions -->
+		<jaulp.core.version>3.9.0-SNAPSHOT</jaulp.core.version>
+		<jaulp.lang.version>${jaulp.core.version}</jaulp.lang.version>
+		<jaulp.xml.version>${jaulp.core.version}</jaulp.xml.version>
 		<!-- EXTERNAL LIBRARIES versions -->
 		<velocity.version>1.7</velocity.version>
 		<c10n.version>1.1</c10n.version>
