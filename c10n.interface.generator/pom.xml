@@ -8,7 +8,7 @@
 		<!-- PROJECT encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- JAULP versions -->
-		<jaulp.core.version>3.9.0-SNAPSHOT</jaulp.core.version>
+		<jaulp.core.version>3.9.0</jaulp.core.version>
 		<jaulp.lang.version>${jaulp.core.version}</jaulp.lang.version>
 		<jaulp.xml.version>${jaulp.core.version}</jaulp.xml.version>
 		<!-- EXTERNAL LIBRARIES versions -->
