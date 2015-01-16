@@ -152,7 +152,6 @@ public class C10NInterfaceGenerator {
 							method.setParameters(PropertiesUtils
 									.getPropertyParameters(propertyValue));							
 						} else {
-							// TODO analyze why this happen...
 							System.err.println("Method does not exists in classmodel...\n"
 									+ "classname:"+classModel.getClassName()+"\n"
 											+ "packageName:"+classModel.getPackageName());
