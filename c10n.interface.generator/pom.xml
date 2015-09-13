@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.alpharogroup</groupId>
-  <artifactId>c10n.interface.generator</artifactId>
-  <version>2.0.0</version>
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.alpharogroup</groupId>
+	<artifactId>c10n.interface.generator</artifactId>
+	<version>2.0.0</version>
+
 	<name>${project.artifactId}</name>
 
 	<description>An inteface generator for the c10n library.</description>
@@ -37,7 +38,7 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 			<distribution>repo</distribution>
 		</license>
-	</licenses>  
+	</licenses>
 
 	<properties>
 		<!-- PROJECT encoding -->
@@ -69,7 +70,7 @@
 		<maven-release-plugin.version>2.5.1</maven-release-plugin.version>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
 		<nexus-staging-maven-plugin.version>1.6.3</nexus-staging-maven-plugin.version>
-		<maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>		
+		<maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>
 		<maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
 		<license-maven-plugin.version>2.5</license-maven-plugin.version>
 	</properties>
@@ -173,7 +174,7 @@
 				<directory>src/test/resources</directory>
 			</testResource>
 
-		</testResources>		
+		</testResources>
 
 		<pluginManagement>
 
@@ -324,27 +325,6 @@
 						<downloadSources>true</downloadSources>
 					</configuration>
 				</plugin>
-				<!-- The Nexus Staging Maven Plugin is the recommended way to deploy 
-					your components to OSSRH and release them to the Central Repository. _______________ 
-					If your version is a release version (does not end in -SNAPSHOT) and with 
-					this setup in place, you can run a deployment to OSSRH and an automated release 
-					to the Central Repository with the usual: mvn clean deploy _________________________ 
-					With the property autoReleaseAfterClose set to false you can manually inspect 
-					the staging repository in Nexus and trigger a release of the staging repository 
-					later with: mvn nexus-staging:release. -->
-				<plugin>
-					<groupId>org.sonatype.plugins</groupId>
-					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>${nexus-staging-maven-plugin.version}</version>
-					<extensions>true</extensions>
-					<configuration>
-						<serverId>ossrh</serverId>
-						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-						<autoReleaseAfterClose>true</autoReleaseAfterClose>
-					</configuration>
-				</plugin>
-				
-
 			</plugins>
 
 		</pluginManagement>
