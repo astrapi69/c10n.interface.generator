@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.alpharogroup</groupId>
   <artifactId>c10n.interface.generator</artifactId>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   
 	<name>${project.artifactId}</name>
 
@@ -43,7 +43,7 @@
 		<!-- PROJECT encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- JAULP versions -->
-		<jaulp.core.version>3.9.0</jaulp.core.version>
+		<jaulp.core.version>4.0.0</jaulp.core.version>
 		<jaulp.lang.version>${jaulp.core.version}</jaulp.lang.version>
 		<jaulp.xml.version>${jaulp.core.version}</jaulp.xml.version>
 		<!-- EXTERNAL LIBRARIES versions -->
@@ -56,9 +56,9 @@
 		<!-- UNIT TEST versions -->
 		<testng.version>6.8.8</testng.version>
 		<!-- MAVEN PLUGIN versions -->
-		<maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
-		<maven-compiler-plugin.source.version>1.7</maven-compiler-plugin.source.version>
-		<maven-compiler-plugin.target.version>1.7</maven-compiler-plugin.target.version>
+		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+		<maven-compiler-plugin.source.version>1.8</maven-compiler-plugin.source.version>
+		<maven-compiler-plugin.target.version>1.8</maven-compiler-plugin.target.version>
 		<maven-compiler-plugin.encoding>UTF-8</maven-compiler-plugin.encoding>
 		<maven-compiler-plugin.optimize>true</maven-compiler-plugin.optimize>
 		<maven-compiler-plugin.debug>true</maven-compiler-plugin.debug>
