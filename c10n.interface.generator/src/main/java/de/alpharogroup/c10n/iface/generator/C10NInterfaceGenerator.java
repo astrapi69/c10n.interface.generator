@@ -33,7 +33,7 @@ import de.alpharogroup.lang.model.AnnotationModel;
 import de.alpharogroup.lang.model.ClassModel;
 import de.alpharogroup.lang.model.MethodModel;
 import de.alpharogroup.locale.Locales;
-import de.alpharogroup.string.StringUtils;
+import de.alpharogroup.string.StringExtensions;
 
 public class C10NInterfaceGenerator
 {
@@ -155,7 +155,7 @@ public class C10NInterfaceGenerator
 			MethodModel method = null;
 			if (0 < lastIndex)
 			{
-				interfaceName = StringUtils.setFirstCharacterToUpperCase(key.substring(
+				interfaceName = StringExtensions.firstCharacterToUpperCase(key.substring(
 					lastIndex + 1, key.length()));
 				if (interfaces.containsKey(interfaceName))
 				{
@@ -206,7 +206,7 @@ public class C10NInterfaceGenerator
 						annotation.setValue(propertyValue);
 						method.setParameters(PropertiesUtils.getPropertyParameters(propertyValue));
 					}
-					final String cn = StringUtils.setFirstCharacterToUpperCase(classModel
+					final String cn = StringExtensions.firstCharacterToUpperCase(classModel
 						.getClassName());
 					classModel.setClassName(cn);
 					interfaces.put(interfaceName, classModel);
@@ -257,7 +257,7 @@ public class C10NInterfaceGenerator
 						annotation.setValue(propertyValue);
 						method.setParameters(PropertiesUtils.getPropertyParameters(propertyValue));
 					}
-					final String cn = StringUtils.setFirstCharacterToUpperCase(classModel
+					final String cn = StringExtensions.firstCharacterToUpperCase(classModel
 						.getClassName());
 					classModel.setClassName(cn);
 					interfaces.put(interfaceName, classModel);
