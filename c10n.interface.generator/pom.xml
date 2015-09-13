@@ -324,6 +324,26 @@
 						<downloadSources>true</downloadSources>
 					</configuration>
 				</plugin>
+				<!-- The Nexus Staging Maven Plugin is the recommended way to deploy 
+					your components to OSSRH and release them to the Central Repository. _______________ 
+					If your version is a release version (does not end in -SNAPSHOT) and with 
+					this setup in place, you can run a deployment to OSSRH and an automated release 
+					to the Central Repository with the usual: mvn clean deploy _________________________ 
+					With the property autoReleaseAfterClose set to false you can manually inspect 
+					the staging repository in Nexus and trigger a release of the staging repository 
+					later with: mvn nexus-staging:release. -->
+				<plugin>
+					<groupId>org.sonatype.plugins</groupId>
+					<artifactId>nexus-staging-maven-plugin</artifactId>
+					<version>${nexus-staging-maven-plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<serverId>ossrh</serverId>
+						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+						<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					</configuration>
+				</plugin>
+				
 
 			</plugins>
 
@@ -389,6 +409,7 @@
 
 	<profiles>
 
+
 		<profile>
 			<id>oss.sonatype.org-staged-release</id>
 			<!-- This is the profile to use for releasing into the staged release 
@@ -415,6 +436,12 @@
 
 					<plugin>
 						<inherited>true</inherited>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+					</plugin>
+
+					<plugin>
+						<inherited>true</inherited>
 						<artifactId>maven-gpg-plugin</artifactId>
 					</plugin>
 
@@ -424,10 +451,12 @@
 			<distributionManagement>
 				<snapshotRepository>
 					<id>ossrh</id>
+					<name>Sonatype Nexus Snapshots</name>
 					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 				</snapshotRepository>
 				<repository>
 					<id>ossrh</id>
+					<name>Nexus Release Repository</name>
 					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 				</repository>
 			</distributionManagement>
